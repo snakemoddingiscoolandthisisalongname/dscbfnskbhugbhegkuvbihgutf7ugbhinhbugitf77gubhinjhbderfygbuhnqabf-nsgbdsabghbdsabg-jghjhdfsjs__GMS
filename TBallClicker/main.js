@@ -9249,7 +9249,7 @@ Game.Launch=function()
 		Game.last.choicesFunction=function()
 		{
 			var choices=[];
-			choices[0]={name:'Automatic',icon:[0,7]};
+			choices[0]={name:'Automatic Tennis Ball Picker',icon:[0,7]};
 			choices[1]={name:'Tennis Ball',icon:[21,21]};
 			choices[2]={name:'Tennis Ball',icon:[22,21]};
 			choices[3]={name:'Tennis Ball',icon:[23,21]};
