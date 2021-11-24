@@ -9259,6 +9259,8 @@ Game.Launch=function()
 			choices[7]={name:'Tennis Ball',icon:[27,21]};
 			choices[8]={name:'Tennis Ball',icon:[28,21]};
 			choices[9]={name:'Tennis Ball',icon:[29,21]};
+			choices[10]={name:'Tennis Ball',icon:[21,22]};
+			choices[11]={name:'Tennis Ball',icon:[22,22]};
 			choices[Game.bgType].selected=1;
 			return choices;
 		}
@@ -9276,6 +9278,8 @@ Game.Launch=function()
 			7:{pic:'grandmas2'},
 			8:{pic:'grandmas3'},
 			9:{pic:'bgMoney'},
+			10:{pic:'tennis1'},
+			11:{pic:'tennis2'},
 		};
 		
 		order=255;
