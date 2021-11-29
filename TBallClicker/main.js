@@ -9250,15 +9250,15 @@ Game.Launch=function()
 		{
 			var choices=[];
 			choices[0]={name:'Automatic',icon:[0,7]};
-			choices[1]={name:'Blue',icon:[21,21]};
-			choices[2]={name:'Red',icon:[22,21]};
-			choices[3]={name:'White',icon:[23,21]};
-			choices[4]={name:'Black',icon:[24,21]};
-			choices[5]={name:'Gold',icon:[25,21]};
-			choices[6]={name:'Grandmas',icon:[26,21]};
-			choices[7]={name:'Displeased grandmas',icon:[27,21]};
-			choices[8]={name:'Angered grandmas',icon:[28,21]};
-			choices[9]={name:'Money',icon:[29,21]};
+			choices[1]={name:'Tennis Ball',icon:[21,21]};
+			choices[2]={name:'Tennis Ball',icon:[22,21]};
+			choices[3]={name:'Tennis Ball',icon:[23,21]};
+			choices[4]={name:'Tennis Ball',icon:[24,21]};
+			choices[5]={name:'Tennis Ball',icon:[25,21]};
+			choices[6]={name:'Tennas Ball',icon:[26,21]};
+			choices[7]={name:'Tennis Ball',icon:[27,21]};
+			choices[8]={name:'Tennis Ball',icon:[28,21]};
+			choices[9]={name:'Tennis Ball',icon:[29,21]};
 			choices[Game.bgType].selected=1;
 			return choices;
 		}
@@ -13370,7 +13370,7 @@ Game.Launch=function()
 		
 		if (Game.T%(Game.fps*2)==0)
 		{
-			var title='Cookie Clicker';
+			var title='TBallClicker';
 			if (Game.season=='fools') title='Cookie Baker';
 			document.title=(Game.OnAscend?'Ascending! ':'')+Beautify(Game.cookies)+' '+(Game.cookies==1?'cookie':'cookies')+' - '+title;
 		}
