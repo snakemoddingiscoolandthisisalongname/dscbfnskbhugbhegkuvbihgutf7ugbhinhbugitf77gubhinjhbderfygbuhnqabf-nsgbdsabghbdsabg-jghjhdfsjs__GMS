@@ -1,6 +1,6 @@
 # CookieClicker
 
-<img src="bgGold" width="128">
+<img src="bgGold.jpg" width="128">
 
 The original game can be found at http://orteil.dashnet.org/cookieclicker/
 
