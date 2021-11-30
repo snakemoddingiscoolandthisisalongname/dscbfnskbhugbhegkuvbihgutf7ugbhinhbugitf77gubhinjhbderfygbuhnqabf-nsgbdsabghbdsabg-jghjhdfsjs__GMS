@@ -1,22 +1,4 @@
-/*
-Orteil's crappy dungeon generation library, 2013
-Unfinished and buggy, use at your own risk (please credit)
-http://orteil.dashnet.org
 
-Rough process (might or might not be what actually happens) :
-1 make a room in the middle
-2 pick one of its walls (not corners)
-3 select a free tile on the other side of that wall
-4 iteratively expand the selection in one (corridors) or two (rooms) directions, stopping when we meet a wall or when we're above the size threshold
-5 compute that selection into a room
-6 add decorations to the room (pillars, water) but only on the center tiles, as to leave free passages (sprinkle destructible decorations anywhere)
-7 take a random floor tile in the room and repeat step 4, but don't stop at the walls of this room (this creates branching) - repeat about 5 times for interesting shapes
-8 add those branches to the room
-9 carve the room into the map, and set the initially selected wall as a door - set the new room's parent to the previous room, and add it to its parent's children
-10 repeat step 2 with any free wall on the map until the amount of tiles dug is above the desired fill ratio
-
-Note : I should probably switch the rendering to canvas to allow stuff like occlusion shadows and lights
-*/
 
 if (1==1 || undefined==Math.seedrandom)
 {
