@@ -1,0 +1,80 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js" integrity="sha256-Xxq2X+KtazgaGuA2cWR1v3jJsuMJUozyIXDB3e793L8=" crossorigin="anonymous" type="2c55b0538c126c962879654c-text/javascript"></script>
+</head>
+<body>
+<div class="content-container">
+<div class="row margin-top-20">
+<div class="column column-12" style="text-align: center">
+<h3>Clicks: <span id="clicks">0</span></h3>
+<button id="clicker" type="button" style="width: 1350px; height:757px;">
+Click here
+</button>
+<button id="reset" type="button" style="display:none;">
+Restart
+</button>
+<h3 id="countdown"></h3>
+</div>
+</div>
+</div>
+<script type="2c55b0538c126c962879654c-text/javascript">
+        $(function () {
+            var start;
+            var countdown;
+            var clicks = 0;
+            var active = false;
+            $( "#clicker" ).on("mousedown", function(e) {
+                if(e.which == 1){
+                    if(!active){
+                        start = $.now();
+                        active = true;
+                        countdown = setInterval(function(){ timer() }, 57);
+                        clicks = 0;
+                    }
+                    $(this).blur();
+                    clicks++;
+                    $('#clicks').html(clicks);
+                }
+            });
+
+            $( "#reset" ).click(function() {
+                if(!active){
+                    $('#reset').hide();
+                    $('#clicker').show();
+                    $('.progress').show();
+                    clicks = 0;
+                    $('#clicks').html(clicks);
+                    clearInterval(countdown);
+                }
+            });
+
+            function timer() {
+                if(($.now() - start) > 15000){
+                    $('#clicker').hide();
+                    $('.countdown').hide();
+                    $('#countdown').html('');
+                    $('#reset').show();
+                    $('#clicks').html((clicks / 15) + ' CPS');
+                    active = false;
+                    clearInterval(countdown);
+                    document.getElementById("clicker").innerHTML = 'Click Here';
+                    return;
+                }
+                var t = (start - $.now()) / 1000
+                $('#countdown').html(Math.abs(t));
+            }
+        });
+
+</script>
+<br>
+<br>
+<br>
+<br>
+
+<div id="M496937ScriptRootC823043">
+</div>
+
+<br>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2c55b0538c126c962879654c-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"655fd0cc4fa30ce5","version":"2021.5.1","r":1,"token":"2e583e1c669f45479ba597863abb4763","si":10}'></script>
+</body>
+</html>
