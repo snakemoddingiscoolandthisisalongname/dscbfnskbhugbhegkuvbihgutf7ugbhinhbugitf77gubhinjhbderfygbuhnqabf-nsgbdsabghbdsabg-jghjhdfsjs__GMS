@@ -7376,7 +7376,7 @@ Game.Launch=function()
 		}
 		
 		//define objects
-		new Game.Object('Cursor','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 10 seconds.',0,0,{},15,function(me){
+		new Game.Object('dump','cursor|cursors|clicked|[X] extra finger|[X] extra fingers','Autoclicks once every 10 seconds.',0,0,{},15,function(me){
 			var add=0;
 			if (Game.Has('Thousand fingers')) add+=		0.1;
 			if (Game.Has('Million fingers')) add+=		0.5;
@@ -7412,7 +7412,7 @@ Game.Launch=function()
 		});
 		
 		Game.SpecialGrandmaUnlock=15;
-		new Game.Object('Grandma','grandma|grandmas|baked|Grandmas are [X] year older|Grandmas are [X] years older','A nice grandma to bake more cookies.',1,1,{pic:function(i){
+		new Game.Object('Bread','grandma|grandmas|baked|Grandmas are [X] year older|Grandmas are [X] years older','A nice grandma to bake more cookies.',1,1,{pic:function(i){
 			var list=['grandma'];
 			if (Game.Has('Farmer grandmas')) list.push('farmerGrandma');
 			if (Game.Has('Worker grandmas')) list.push('workerGrandma');
